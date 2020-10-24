@@ -2,14 +2,16 @@ import java.util.Scanner;
 
 public class If_Statement {
     /*
-    If-statements innehåller ett villkor, om detta villkor uppfylls kommer koden i if-blocket att köras.
-    If else kommer efter 
+    'if' -statements innehåller ett villkor, om detta villkor uppfylls kommer koden i if-blocket att köras.
+    'if else' kontrollerar ett till villkor om inte det första i 'if' gäller.
+    'else' är då ingen av ovanstående villkor kör. Då körs detta kodblock. 
 
     **/
     public static void main(String[] args) {
         if(true){
             System.out.println("Detta kommer alltid att skrivas ut");
         }
+
 
         String val = "Else!";
 
@@ -22,6 +24,16 @@ public class If_Statement {
         }
         else{System.out.println("Detta visas dockx!");}
 
+
+
+
+
+        /**
+         * Nedan är lite av ett specialfall, det är egentligen inte ett if-statement. 
+         * Om man har många utfall kan man använda en 'switch' istället. Det är exempelvis praktiskt
+         * som ett enkelt menysystem. 
+         */
+
         Scanner sc = new Scanner(System.in);
         String choice = sc.nextLine();
         choice = choice.toLowerCase();
@@ -29,8 +41,8 @@ public class If_Statement {
 
         java.net.URI URL = null;
         //Ignorera 'try' och 'catch' nedan, jag kan förklara detta om ni är intresserade. 
+        
         try{
-            
             switch (choice) {
             case "google":
                 URL = new java.net.URI("https://www.google.com/");
@@ -47,8 +59,6 @@ public class If_Statement {
         }
         
         java.awt.Desktop.getDesktop().browse(URL);
-
-
     }catch(Exception e){}
         
 
